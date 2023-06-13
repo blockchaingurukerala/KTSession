@@ -54,28 +54,23 @@ App = {
 
   loadContract: async () => {
     // Create a JavaScript version of the smart contract
-    const Sample = await $.getJSON('FDP.json')
+    const Sample = await $.getJSON('Sample.json')
     App.contracts.Sample = TruffleContract(Sample)
     App.contracts.Sample.setProvider(App.web3Provider)
     // Hydrate the smart contract with values from the blockchain
-    App.fdp = await App.contracts.Sample.deployed();
+    App.sample = await App.contracts.Sample.deployed();
   },
   render: async () => {
-      var n= await App.fdp.name();
-      var e=await App.fdp.email();
-      var p=await App.fdp.phone();
-      $("#n").html(n);
-      $("#e").html(e);
-      $("#p").html(p);
-      //window.alert(p)
+    var a=await App.sample.str();
+    $("#display").html(a)
+    console.log(a);
   },
-  updateBC: async () =>{
-      var n=$("#wn").val();
-      var e=$("#we").val();
-      var p=$("#wp").val();
-      await App.fdp.updateValues(n,e,p,{from:App.account});
+  update :async () =>{
+  
+    var b=$("#txt").val();
+    window.alert("working"+b)
+    await App.sample.updateStr(b,{from:App.account})
   }
- 
  
 };
 

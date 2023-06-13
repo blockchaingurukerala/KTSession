@@ -1,4 +1,4 @@
-var Migrations = artifacts.require("./FDP.sol");
+var Migrations = artifacts.require("./Sample.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(Migrations);

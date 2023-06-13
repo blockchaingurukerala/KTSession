@@ -18,58 +18,30 @@
     <![endif]-->
   </head>
   <body style="background-color: antiquewhite;">
+   
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1>Welcome to FDP-Blockchain</h1>
-          <h2>Value from the blockchain <span id="fromBC"></span></h2>
+        <div class="col col-12 col-md-1"></div>
+        <div class="col col-12 col-md-10">
+          <h1>Welcome to KT Session</h1>
+          <h3>Value from the block chain is <span id="display"></span></h3>
         </div>
+        <div class="col col-12 col-md-1"></div>
       </div>
-
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h2>Update Your Details</h2>
+        <div class="col col-12 col-offset-md-2">
           <table class="table">
             <tr>
-              <td>Name</td>
-              <td><input type="text" class="form-control" id="wn"></td>
+              <td>Enter vale</td>
+              <td><input type="text" class="form-control" id="txt"></td>
             </tr>
             <tr>
-              <td>Email</td>
-              <td><input type="text" class="form-control" id="we"></td>
-            </tr>
-            <tr>
-              <td>Phone</td>
-              <td><input type="text" class="form-control" id="wp"></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="text-align: center;"><button type="button" class="btn btn-primary btn-lg" onclick="App.updateBC()" >Submit</button ></td> 
+              <td colspan="2" style="text-align: center;" onclick="App.update()"><button type="button" class="btn btn-primary btn-lg">Update</button></td>
             </tr>
           </table>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h2>Details From the Blockchain</h2>
-          <table class="table">
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-            </tr>
-            <tr>
-              <td><span id="n"></span></td>
-              <td><span id="e"></span></td>
-              <td><span id="p"></span></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-     
     </div>
-
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
